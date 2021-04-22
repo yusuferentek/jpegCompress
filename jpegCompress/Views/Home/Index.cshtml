@@ -3,7 +3,33 @@
     ViewBag.Title = "Index";
 }
 
-<div style="text-align: center; margin-top:300px; margin-bottom:300px;">
+<style>
+    .center {
+        width: 100px;
+        height: 100px;
+        text-align: center;
+        position: relative;
+        display: inline-block;
+        margin-top: 300px;
+       
+    }
+
+        .center .img-top {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 99;
+        }
+
+    .center:hover .img-top{
+        display:inline;
+    }
+</style>
+
+<div class="center">
     <img src="~/img/uploadicon.png" />
-    <h2>Resminizi buraya yükleyiniz.</h2>
+    <img src="~/img/uploadicondark.png" class="img-top" />
+    
 </div>
+<div style=" margin-bottom: 300px;"><h2>Resminizi buraya yükleyiniz.</h2></div>
