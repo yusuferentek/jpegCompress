@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+
+    <style>
+        .block {
+            display: block;
+            margin: 10px;
+            border: 2px solid gray;
+            padding: 10px;
+            
+        }
+
+        .body {
+            display: block;
+            margin: 10px;
+            border: 2px solid gray;
+            padding: 10px;
+            width: 1460px;
+            height: 720px;
+            background-image: url(/img/bckimg.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            text-align: center;
+        }
+
+        .footer {
+            display: block;
+            margin: 10px;
+            border: 2px solid gray;
+            padding: 10px;
+            background-color: lightslategray;
+            color: white;
+            text-align: center;
+        }
+
+        #menu ul li {
+            display: inline-block;
+            width: 100px;
+            height: 30px;
+            text-align: center;
+            border: 1px solid #090938;
+            background-color: #0026ff;
+            margin: 5px;
+            line-height: 30px;
+            vertical-align: middle;
+        }
+
+        #menu {
+            background-color: lightslategray;
+            color: white;
+            text-decoration: none;
+            font-size: smaller;
+            text-align:center;
+        }
+
+        #menu li:hover {
+            background-color: aqua;
+        }
+
+            #menu li:hover a {
+                color: blue;
+            }
+    </style>
+
+</head>
+<body>
+
+    <div id="menu" class="block">
+        @*Header*@
+        <p ><h2><b>JPEG COMPRESS</b></h2><h4><b>Daha küçük boyutlar</b></h4></p>
+    </div>
+
+    <div class="body">
+        @RenderBody()
+    </div>
+
+    <div class="footer">
+        @*Footer*@
+        <b>Tüm hakları saklıdır. &copy;</b>
+    </div>
+</body>
+</html>
