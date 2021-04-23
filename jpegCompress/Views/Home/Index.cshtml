@@ -2,7 +2,9 @@
 @{
     ViewBag.Title = "Index";
 }
+<script>
 
+</script>
 <style>
     .icon {
         width: 100px;
@@ -11,7 +13,6 @@
         position: relative;
         display: inline-block;
         margin-top: 300px;
-       
     }
 
         .icon .img-top {
@@ -22,14 +23,23 @@
             z-index: 99;
         }
 
-    .icon:hover .img-top{
-        display:inline;
-    }
+        .icon:hover .img-top {
+            display: inline;
+        }
 </style>
 
-<div class="icon">
-    <img src="~/img/uploadicon.png" />
-    <img src="~/img/uploadicondark.png" class="img-top" />
+@using (Html.BeginForm("Index", "HomeController", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div class="icon">
+        <label for="file-input">
+            <img src="~/img/uploadicon.png" />
+            <img src="~/img/uploadicondark.png" class="img-top" />
+
+        </label>
+        <input id="file-input" type="file" style="opacity:0;" value="imageInput" />
+    </div>
+}
+    <div style=" margin-bottom: 300px; color: #151515"><h2>Resminizi buraya yükleyiniz.</h2>
+   
     
-</div>
-<div style=" margin-bottom: 300px; color: #151515"><h2>Resminizi buraya yükleyiniz.</h2></div>
+    </div>

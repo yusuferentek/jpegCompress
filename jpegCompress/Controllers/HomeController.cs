@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -11,11 +12,13 @@ namespace jpegCompress.Controllers
         // GET: Home
         public ActionResult Index()
         {
+            
             return View();
         }
-        public ActionResult About()
+        [HttpPost]
+        public ActionResult Index(string imageInput)
         {
             return View();
         }
-    }
+    }       
 }
